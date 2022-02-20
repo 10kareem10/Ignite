@@ -12,7 +12,7 @@ const initState = {
           ...state,
           popular: action.payload.popular,
           upcoming: action.payload.upcoming,
-        newGames: action.payload.newGames,
+          newGames: action.payload.newGames,
           };
       
       default:

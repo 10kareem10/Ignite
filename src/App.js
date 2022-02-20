@@ -3,6 +3,7 @@ import {useDispatch} from "react-redux";
 import {loadGames} from "./actions/gamesAction";
 import Home from "./pages/Home";
 import GlobalStyles from "./components/GlobalStyles";
+import GameDetail from "./components/GameDetail";
 
 
 function App() {
