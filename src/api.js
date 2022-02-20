@@ -42,4 +42,7 @@ const getCurrentMonth = () => {
  export const newGamesURL = () => `${base_url}${newGames}`;
 console.log(popularGamesURL())
 
-  
+  //GAME DETAILS
+  export const gameDetailsURL = (game_id) =>`${base_url}games/${game_id}?${key_url}`;
+
+  export const gameScreenshotURL = (game_id) =>`${base_url}games/${game_id}/screenshots?${key_url}`;
