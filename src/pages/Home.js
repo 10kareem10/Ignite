@@ -37,7 +37,7 @@ const Home = () => {
         </AnimatePresence>
         {searched.length ? (
           <div className="searched">
-            <h2>Seaarched Games</h2>
+            <h2>Searched Games</h2>
             <Games>
               {searched.map((game) => (
                 <Game
