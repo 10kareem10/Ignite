@@ -1,15 +1,12 @@
 import React, { useEffect } from "react";
-//Redux
 import { useDispatch, useSelector } from "react-redux";
 import { loadGames } from "../actions/gamesAction";
-//Components
 import Game from "../components/Game";
 import GameDetail from "../components/GameDetail";
-//Styling and Animations
 import styled from "styled-components";
 import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import { useLocation } from "react-router-dom";
-// import { fadeIn } from "../animations";
+import { fadeIn } from "../animations";
 
 const Home = () => {
   //Get the current Location
@@ -27,7 +24,7 @@ const Home = () => {
   );
 
   return (
-    <GameList >
+    <GameList variants={fadeIn} initial="hidden" animate="show">
       <AnimateSharedLayout type="crossfade">
         {/* Wraps the component that i want to transition to */}
         {/* This component should have some kind of  toggle , in our case the pathId  */}
