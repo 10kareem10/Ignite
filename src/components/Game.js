@@ -19,11 +19,11 @@ const Game =({name,released,image,id})=>{
 
   }
     return(
-        <StyledGame variants={popup} initial="hidden" animate="show" LayoutId={stringPathId} onClick={loadDetailHandler}>
+        <StyledGame variants={popup} initial="hidden" animate="show" layoutId={stringPathId} onClick={loadDetailHandler}>
           <Link to={`/game/${id}`}>
-            <motion.h3 LayoutId={`title ${stringPathId}`}>{name}</motion.h3>
+            <motion.h3 layoutId={`title ${stringPathId}`}>{name}</motion.h3>
             <p>{released}</p>
-            <motion.img LayoutId={`image ${stringPathId}`} src={smallImage(image,640)} alt={name} />
+            <motion.img layoutId={`image ${stringPathId}`} src={smallImage(image,640)} alt={name} />
             </Link>
         </StyledGame>
 
@@ -46,3 +46,5 @@ const StyledGame = styled(motion.div)`
 `;
 
 export default Game;
+
+

@@ -17,7 +17,7 @@ import starFull from "../img/star-full.png";
 
 
 
-const GameDetail =(pathId)=>{
+const GameDetail =({pathId})=>{
     const history=useHistory();
     const exitDetailHandler=(e)=>{
         const element=e.target;
@@ -179,3 +179,4 @@ const Description = styled(motion.div)`
 
 
 export default GameDetail;
+
