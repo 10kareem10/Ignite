@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
-
+import { motion,AnimatePresence,AnimateSharedLayout } from "framer-motion";
 import { useDispatch } from "react-redux";
 import { loadDetail } from "../actions/detailAction";
 import { Link } from "react-router-dom";
@@ -10,7 +9,7 @@ import { smallImage } from "../util";
 
 
 const Game =({name,released,image,id})=>{
-  const stringPathId=id.toString();
+  const stringPathId = id.toString();
 
   const dispatch=useDispatch()
   const loadDetailHandler=()=>{
@@ -19,11 +18,11 @@ const Game =({name,released,image,id})=>{
 
   }
     return(
-        <StyledGame layoutId={stringPathId} onClick={loadDetailHandler}>
+        <StyledGame LayoutId={stringPathId} onClick={loadDetailHandler}>
           <Link to={`/game/${id}`}>
-            <motion.h3 layoutId={`title ${stringPathId}`}>{name}</motion.h3>
+            <motion.h3 LayoutId={`title ${stringPathId}`}>{name}</motion.h3>
             <p>{released}</p>
-            <motion.img layoutId={`image ${stringPathId}`} src={smallImage(image,640  )} alt={name} />
+            <motion.img LayoutId={`image ${stringPathId}`} src={smallImage(image,640)} alt={name} />
             </Link>
         </StyledGame>
 
